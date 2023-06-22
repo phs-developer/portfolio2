@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+ @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+ @font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'GmarketSansMedium', sans-serif;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* header */
+header {
+  background-image: url(../public/img/bg.jpg);
+  background-size: cover;
+  color: rgb(243, 243, 243);
+  height: 100vh;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header.flex {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+header > .container {
+  margin: 0px 0px 4rem 6rem;
+}
+.container > h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.container > h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1rem;
+  font-weight: 100;
+}
+.container > ul {
+  justify-content: flex-start;
+}
+.container > ul > li {
+  background-color: white;
+  border-radius: 5px;
+  padding: 7.5px 0px 0px 7.5px;
+  width: 35px;
+  height: 35px;
+  margin-right: 1.5em;
+}
+.container > ul > li > img {
+  width: 20px;
+  height: 20px;
 }

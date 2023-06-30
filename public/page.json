@@ -1,0 +1,26 @@
+{
+  "mangotoon" : {
+    "text" : "Vanilla JS로 구현한 웹소설/웹툰 전자책 사이트의 메인 페이지입니다. PC 적응형으로 제작된 첫 개인 프로젝트이며 기능보다는 깔끔한 UI에 초점을 맞춰 구현하였습니다. json 데이터는 비동기 처리를 통해 받아왔으며 3개 컴포넌트만을 사용하여 재사용성을 높혔습니다.",
+    "tag" : ["Vanilla JS", "HTML/CSS"],
+    "site" : "https://mangotoon.netlify.app",
+    "github" : "https://github.com/phs-developer/ebook-project"
+  },
+  "hero" : {
+    "text" : "@@@",
+    "tag" : ["HTML/CSS", "TS", "REACT"],
+    "site": "https://phs-developer.github.io/SuperHero",
+    "github" : "https://github.com/phs-developer/SuperHero"
+  },
+  "portfolio" : {
+    "text" : "@@@",
+    "tag" : ["HTML/CSS", "JS", "REACT"],
+    "site": "@@@",
+    "github" : "https://github.com/phs-developer/portfolio2"
+  },
+  "foot" : {
+    "text" : "React Router를 이용해 SPA로 제작된 신발 사이트입니다. 반응형 웹으로 제작하여 모든 환경에서 사용이 가능하며, UI/UX 를 고려하여 페이지와 탭 이동이 편하도록 구현하였습니다. 비동기 통신을 통해 데이터를 받아와 메인 페이지, 카테고리 페이지를 구성하였습니다.",
+    "tag" : ["HTML/CSS", "JS", "REACT", "ROUTER"],
+    "site": "https://foot-market.netlify.app",
+    "github" : "https://github.com/phs-developer/FOOT-market"
+  }
+}

@@ -1,11 +1,15 @@
 export const About = () => {
   return (
-    <section className="flex about">
+    <section id="about" className="flex about">
       <div className="container">
-        <div className="about-left">
+        <div className="about-left" data-aos="fade-up" data-aos-duration="1000">
           <img src="./img/me.jpg" alt="사진" />
         </div>
-        <div className="about-right">
+        <div
+          className="about-right"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
           <h2>About Me</h2>
           <p>
             안녕하세요, 박희순입니다.

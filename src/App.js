@@ -3,26 +3,56 @@ import { About } from "./section/about.js";
 import { Contact } from "./section/contact.js";
 import { Project } from "./section/project.js";
 import { Stack } from "./section/stack";
+import Typewriter from "typewriter-effect";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  AOS.init();
+  AOS.refresh();
+  useEffect(() => {
+    const view = document.querySelectorAll(".view");
+    setTimeout(() => {
+      view.forEach((e) => {
+        e.style.opacity = 1;
+      });
+    }, 4400);
+  }, []);
+
   const Header = () => {
     return (
-      <header className="flex">
+      <header id="home" className="flex">
         <div className="container">
           <h1>
             안녕하세요,
-            <p>저는 박희순/FE 개발자 입니다.</p>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("박희순 입ㄴ")
+                  .deleteAll()
+                  .pauseFor(600)
+                  .typeString("FE 개발자 입니다 :)")
+                  .start();
+              }}
+            />
           </h1>
-          <h2>박희순</h2>
-          <ul className="flex">
+          <h2 className="view">박희순</h2>
+          <ul className="flex view">
             <li>
-              <img src="./img/github.png" alt="github" />
+              <a href="https://github.com/phs-developer">
+                <img src="./img/github.png" alt="github" />
+              </a>
             </li>
             <li>
-              <img src="./img/blog.png" alt="blog" />
+              <a href="https://github.com/phs-developer">
+                <img src="./img/blog.png" alt="blog" />
+              </a>
             </li>
             <li>
-              <img src="./img/email.png" alt="email" />
+              <a href="mailto:phs970824@daum.net">
+                <img src="./img/email.png" alt="email" />
+              </a>
             </li>
           </ul>
         </div>
@@ -41,18 +71,21 @@ function App() {
         </div>
         <div className="footer-bottom flex">
           <h3>Links</h3>
-          <ul>
+          <ul className="flex">
             <li>
-              <a href="!#">About Me</a>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <a href="!#">Stack</a>
+              <a href="#about">About Me</a>
             </li>
             <li>
-              <a href="!#">My Work</a>
+              <a href="#stacks">Stacks</a>
             </li>
             <li>
-              <a href="!#">Contact With Me</a>
+              <a href="#project">My Work</a>
+            </li>
+            <li>
+              <a href="#contact">Contact With Me</a>
             </li>
           </ul>
         </div>

@@ -1,19 +1,26 @@
 export const Contact = () => {
   return (
-    <section className="contact">
+    <section id="contact" className="contact flex">
       <h2>CONTACT WITH ME</h2>
       <div className="contact-container">
-        <div className="contact-left flex">
-          <ul>
-            <li>010-3450-1944</li>
-            <li>phs970824@daum.net</li>
-            <li>https://blog.naver.com/gmltnscjswo</li>
-            <li>https://github.com/phs-developer</li>
-          </ul>
-        </div>
-        <div className="contact-right">
-          <img src="./img/contact.jpg" alt="이미지" />
-        </div>
+        <ul data-aos="zoom-in-down" data-aos-duration="1500">
+          <li>
+            <a href="tel:010-3450-1944">010-3450-1944</a>
+          </li>
+          <li>
+            <a href="mailto:phs970824@daum.net">phs970824@daum.net</a>
+          </li>
+          <li>
+            <a href="https://blog.naver.com/gmltnscjswo">
+              https://blog.naver.com/gmltnscjswo
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/phs-developer">
+              https://github.com/phs-developer
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   );

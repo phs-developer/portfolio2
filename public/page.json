@@ -1,26 +1,34 @@
 {
   "mangotoon" : {
-    "text" : "Vanilla JS로 구현한 웹소설/웹툰 전자책 사이트의 메인 페이지입니다. PC 적응형으로 제작된 첫 개인 프로젝트이며 기능보다는 깔끔한 UI에 초점을 맞춰 구현하였습니다. json 데이터는 비동기 처리를 통해 받아왔으며 3개 컴포넌트만을 사용하여 재사용성을 높혔습니다.",
-    "tag" : ["Vanilla JS", "HTML/CSS"],
+    "text" : "웹툰/웹소설 사이트 mango toon의 메인페이지 입니다. 첫 개인 프로젝트이며 Vanlia JS로 제작되었습니다. 최상·하단의 이벤트 영역과 그 사이에 여러 카테고리를 배치하였으며 재사용성을 높이기 위해 총 3개의 컴포넌트만으로(이벤트 배너, 상품 리스트, 상품 카드) 제작을 하였습니다.",
+    "tag" : ["HTML/CSS", "Vanilla JS"],
     "site" : "https://mangotoon.netlify.app",
-    "github" : "https://github.com/phs-developer/ebook-project"
+    "github" : "https://github.com/phs-developer/ebook-project",
+    "tech" : [{"이벤트 슬라이드" : "라이브러리 없이 직접 구현하여 슬라이드를 만들어보았습니다. 배너를 감싼 Container에 translateX를 주어 이동 효과를 넣었고 자동 슬라이드를 위해 setInterval 함수를 사용했습니다. 좌우 이동 버튼과 함께 혹여나 버튼과 자동 슬라이드의 이동이 중복되는 상황을 방지하고자 mouseleave, mouseenter 이벤트도 부여하였습니다."}]
   },
   "hero" : {
-    "text" : "@@@",
+    "text" : "나만의 히어로를 검색하고 히어로의 정보 카드를 확인할 수 있는 사이트입니다. 대중적인 히어로뿐만 아니라 다양한 만화나 영화에 등장하는 히어로를 검색할 수 있습니다.",
     "tag" : ["HTML/CSS", "TS", "REACT"],
     "site": "https://phs-developer.github.io/SuperHero",
-    "github" : "https://github.com/phs-developer/SuperHero"
+    "github" : "https://github.com/phs-developer/SuperHero",
+    "tech" : [{"typescript 사용" : "처음으로 ts를 사용하여 개발한 프로젝트입니다. 생각보다 세세한 타입 지정이 필요했고, 타입 선언이라는 추가 작업이 계속적으로 필요했기 때문에 번거롭기도 했지만 그만큼 정확한 값의 전달과 컴파일 과정에서 오류를 발견할 수 있다는 큰 장점이 매력적이었습니다."},
+    {"자동 완성 기능": "검색 창에 키워드 입력 시 리스트가 최대 3개까지 보여집니다. 리스트에 있는 히어로를 클릭할 경우에도 결과창으로 넘어가도록 구현했습니다."}]
   },
   "portfolio" : {
-    "text" : "@@@",
+    "text" : "개인 포트폴리오 사이트입니다. AOS, Typewriter 라이브러리를 통해 동적인 UI를 표현하였고 반응형으로 제작되어 pc와 mobile에서 사용이 가능합니다.",
     "tag" : ["HTML/CSS", "JS", "REACT"],
     "site": "@@@",
-    "github" : "https://github.com/phs-developer/portfolio2"
+    "github" : "https://github.com/phs-developer/portfolio2",
+    "tech" : [{"프로젝트 상세 페이지" : "페이지 이동이 아닌 팝업창처럼 띄워지도록 구현했습니다. 프로젝트 클릭 시 fetch를 통해 프로젝트의 데이터를 전달받고 컴포넌트가 활성화 됩니다."},
+              {"동적인 UI": "어두운 배경으로 다운된 분위기를 올리기 위해 동적인 라이브러리를 사용했으며, 여러 환경에서 접할 수 있도록 반응형으로 제작하였습니다."}]
   },
   "foot" : {
-    "text" : "React Router를 이용해 SPA로 제작된 신발 사이트입니다. 반응형 웹으로 제작하여 모든 환경에서 사용이 가능하며, UI/UX 를 고려하여 페이지와 탭 이동이 편하도록 구현하였습니다. 비동기 통신을 통해 데이터를 받아와 메인 페이지, 카테고리 페이지를 구성하였습니다.",
+    "text" : "깔끔하고 편리한 UI/UX에 초점을 두고 제작한 프리미엄 신발 사이트입니다. 좌측의 이동 탭과 우측 하단 TOP버튼으로 이동이 쉽게 구현하였으며, 메인화면 또한 카테고리별로 심플하고 통일감있게 구성하였습니다.",
     "tag" : ["HTML/CSS", "JS", "REACT", "ROUTER"],
     "site": "https://foot-market.netlify.app",
-    "github" : "https://github.com/phs-developer/FOOT-market"
+    "github" : "https://github.com/phs-developer/FOOT-market",
+    "tech" : [{"검색 기능" : "검색 키워드가 포함된 상품들이 나열되도록 검색 기능과 페이지를 구현했으며 페이지 전환을 위해 react-router 기능을 사용하였습니다."},
+            {"장바구니 구현" : "recoil을 사용하여 장바구니 상품을 관리했습니다. ‘담기’ 클릭 시 전역 상태로 관리되는 장바구니 리스트에 id값이 추가되며, 이 id값들로 장바구니 화면을 구성하게 됩니다. 장바구니 내의 ‘삭제’ 버튼 혹은 ‘담기’ 버튼을 한번 더 클릭 시 리스트에서 제거됩니다. 또한, recoil의 selector 기능을 통해 장바구니 수량을 추출하였고 장바구니 아이콘에 숫자로 표시됩니다."},
+            {"로컬 스토리지": "새로고침 시 장바구니가 초기화되는 현상을 방지하기 위해 localStorage를 사용하였습니다."}]
   }
 }

@@ -5,14 +5,16 @@ export const Project = () => {
   const [name, setName] = useState("");
   function handleOnPage(event) {
     const name = event.currentTarget.children[0].innerText;
+    const page = document.querySelector(".page");
     setName(name);
+    page.style.visibility = "visible";
   }
 
   return (
     <section id="project" className="project">
       <h2>My Work</h2>
       <Page name={name} />
-      <p>*클릭 시 상세페이지로 이동</p>
+      <p>*click project!</p>
       <ul className="work">
         <li name="hero" onClick={handleOnPage}>
           <p>HERO</p>

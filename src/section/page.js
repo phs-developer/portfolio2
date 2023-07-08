@@ -1,48 +1,84 @@
 import { useEffect, useState } from "react";
 
 export const Page = ({ name }) => {
-  const [data, setData] = useState();
+  const [data, setData] = useState(null);
+  const imgSrc = `./img/${name.toLowerCase().replaceAll(" ", "")}.jpg`;
+  const reName = name.toLowerCase().replaceAll(" ", "");
   useEffect(() => {
     (async () => {
       //json src 폴더 안에서 작업하고 싶은데 경로가 헷갈린다!!
       const response = await fetch("page.json");
       const data = await response.json();
-      console.log("1");
+      setData(data[reName]);
     })();
-  }, []);
-  console.log(name.toLowerCase().replaceAll(" ", ""));
-  const imgSrc = `./img/${name.toLowerCase().replaceAll(" ", "")}.jpg`;
+  }, [name, reName]);
 
-  return (
-    <article className="page">
-      <button>
-        <img src="./img/close.png" alt="닫기" />
-      </button>
-      <div className="content flex">
-        <h3>{name}</h3>
-        <img src={imgSrc} alt="프로젝트 이미지" />
-        <div className="text-tag">
-          <p className="text">
-            Vanilla JS로 구현한 웹소설/웹툰 전자책 사이트의 메인 페이지입니다.
-            <br />
-            PC 적응형으로 제작된 첫 개인 프로젝트이며 기능보다는 깔끔한 UI에
-            초점을 맞춰 구현하였습니다.
-            <br />
-            json 데이터는 비동기 처리를 통해 받아왔으며 3개 컴포넌트만을
-            사용하여 재사용성을 높혔습니다.
-          </p>
-          <div className="tag">
-            <ul>
-              <li>#Vanila JS</li>
-              <li>#CSS</li>
-            </ul>
-            <ul>
-              <li>사이트 보기</li>
-              <li>Github</li>
-            </ul>
+  //컴포넌트 닫기 버튼 핸들러
+  function handleCloseBtn() {
+    const page = document.querySelector(".page");
+    page.style.visibility = "hidden";
+  }
+
+  // tech toggle 핸들러
+  function handleToggleToTech(e) {
+    const techItem = document.querySelector(`.${e.currentTarget.className}>p`);
+    techItem.style.display =
+      techItem.style.display === "block" ? "none" : "block";
+  }
+
+  if (!data) {
+    // project.js 에서 const page 오류 방지
+    return <article className="page"></article>;
+  } else {
+    return (
+      <article className="page">
+        <button onClick={handleCloseBtn}>
+          <img src="./img/close.png" alt="닫기" />
+        </button>
+        <div className="content flex">
+          <h3>{name} (개인)</h3>
+          <img src={imgSrc} alt="프로젝트 이미지" />
+          <div>
+            <p className="text">{data.text}</p>
+            <div className="tech">
+              {data.tech.map((e, i) => {
+                return (
+                  <div
+                    key={Object.keys(e)}
+                    className={`${reName}-${i}`}
+                    onClick={handleToggleToTech}
+                  >
+                    <h4>
+                      {i + 1}. {Object.keys(e)}
+                      <img src="./img/triangle.png" alt="열기" />
+                    </h4>
+                    <p>{e[Object.keys(e)]}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="tag">
+              <ul>
+                {data.tag.map((e) => {
+                  return <li key={e}>#{e}</li>;
+                })}
+              </ul>
+              <ul>
+                <li>
+                  <a href={data.site} target="blank">
+                    사이트 보기
+                  </a>
+                </li>
+                <li>
+                  <a href={data.github} target="blank">
+                    Github
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </article>
-  );
+      </article>
+    );
+  }
 };

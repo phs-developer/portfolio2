@@ -40,7 +40,7 @@ a {
 
 /* header */
 header {
-  background-image: url(../public/img/bg2.jfif);
+  background-image: url(../public/img/bg.jpg);
   background-attachment: fixed;
   background-size: cover;
   color: var(--light-color);
@@ -319,7 +319,7 @@ header > .container {
   margin-bottom: 5rem;
 }
 .contact-container {
-  background-image: url(../public/img/bg2.jfif);
+  background-image: url(../public/img/bg.jpg);
   background-attachment: fixed;
   background-size: cover;
   padding: 10% 30%;

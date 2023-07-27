@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const Page = ({ name }) => {
+export const Page = ({ name, openPage }) => {
   const [data, setData] = useState(null);
   const imgSrc = `./img/${name.toLowerCase().replaceAll(" ", "")}.jpg`;
   const reName = name.toLowerCase().replaceAll(" ", "");

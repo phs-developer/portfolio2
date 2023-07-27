@@ -1,9 +1,11 @@
+import profileImg from "../../assets/img/me.jpg";
+
 export const About = () => {
   return (
     <section id="about" className="flex about">
       <div className="container">
         <div className="about-left" data-aos="fade-up" data-aos-duration="1000">
-          <img src="./img/me.jpg" alt="사진" />
+          <img src={profileImg} alt="사진" />
         </div>
         <div
           className="about-right"

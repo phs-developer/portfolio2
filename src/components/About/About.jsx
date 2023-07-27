@@ -1,14 +1,19 @@
 import profileImg from "../../assets/img/me.jpg";
+import styles from "./About.module.css";
 
 export const About = () => {
   return (
-    <section id="about" className="flex about">
-      <div className="container">
-        <div className="about-left" data-aos="fade-up" data-aos-duration="1000">
+    <section id="about" className={styles.about}>
+      <div className={styles.container}>
+        <div
+          className={styles.aboutLeft}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <img src={profileImg} alt="사진" />
         </div>
         <div
-          className="about-right"
+          className={styles.aboutRight}
           data-aos="fade-down"
           data-aos-duration="1000"
         >
@@ -28,7 +33,7 @@ export const About = () => {
             남습니다. 이를 알기에 더욱 배우고 더욱 쓸 수 있는 사람이 되고자
             노력하고있습니다.
           </p>
-          <div className="edu">
+          <div className={styles.edu}>
             <h3>교육</h3>
             <ul>
               <li>zero-base 프론트엔드 스쿨 7기 (수료)</li>

@@ -1,8 +1,10 @@
+import styles from "./Contact.module.css";
+
 export const Contact = () => {
   return (
-    <section id="contact" className="contact flex">
+    <section id="contact" className={styles.contact}>
       <h2>CONTACT WITH ME</h2>
-      <div className="contact-container">
+      <div className={styles.contactContainer}>
         <ul data-aos="zoom-in-down" data-aos-duration="1500">
           <li>
             <a href="tel:010-3450-1944">010-3450-1944</a>

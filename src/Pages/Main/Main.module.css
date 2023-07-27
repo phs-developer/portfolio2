@@ -1,0 +1,135 @@
+/* header */
+header {
+  background-image: url(../../assets/img/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--light-color);
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.container {
+  margin: 0px 0px 4rem 6rem;
+}
+.container > h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.container > h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1rem;
+  font-weight: 100;
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.container > ul {
+  display: flex;
+  justify-content: flex-start;
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.container > .view {
+  opacity: 1;
+}
+.container > ul > li {
+  background-color: white;
+  border-radius: 5px;
+  padding: 6.5px 0px 0px 6.5px;
+  width: 30px;
+  height: 30px;
+  margin-right: .7rem;
+}
+.container > ul > li > a > img {
+  width: 17px;
+  height: 17px;
+}
+
+/* footer */
+.footer {
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.918);
+  color: var(--light-color);
+  position: relative;
+}
+.footer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footerTop {
+  margin-bottom: 2.5rem;
+}
+.footerTop > h3 {
+  letter-spacing: .1rem;
+  margin-bottom: 1.5rem;
+}
+.footerTop > div {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.footerTop > div > img {
+  width: 70px;
+}
+.footerBottom > h3 {
+  font-size: .8rem;
+  margin-bottom: .6rem;
+}
+.footerBottom > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: .9rem;
+  column-gap: 2rem;
+}
+.footerBottom > ul > li > a {
+  font-weight: 100;
+  color: var(--light-color);
+}
+.footer > p {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: .7rem;
+  font-weight: 100;
+  color: var(--dark-color-light)
+}
+
+/* media query */
+@media (max-width: 768px) {
+  header > .container{
+    margin-left : 3rem;
+  }
+  .container > h1 {
+    font-size: 3rem;
+  }
+  .container > h2 {
+    font-size: 2rem;
+  }
+  .footerBottom > ul {
+    column-gap: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  header > .container{
+    margin-left : 2rem;
+  }
+  .container > h1 {
+    font-size: 2.3rem;
+  }
+  .container > h2 {
+    font-size: 1.5rem;
+  }
+  footer {
+    padding-bottom: 7rem;
+  }
+  .footerBottom > ul {
+    flex-wrap: wrap;
+  }
+}

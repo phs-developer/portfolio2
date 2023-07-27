@@ -1,17 +1,18 @@
 import meImg from "../../assets/img/me2.jpg";
+import styles from "./Main.module.css";
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="footer-top flex">
+    <footer className={styles.footer}>
+      <div className={styles.footerTop}>
         <h3>Park Hee Soon</h3>
         <div>
           <img src={meImg} alt="나" />
         </div>
       </div>
-      <div className="footer-bottom flex">
+      <div className={styles.footerBottom}>
         <h3>Links</h3>
-        <ul className="flex">
+        <ul>
           <li>
             <a href="#home">Home</a>
           </li>

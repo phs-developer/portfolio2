@@ -1,0 +1,62 @@
+.stack {
+  padding: 7rem;
+  color: var(--light-color);
+  background: url(../../assets/img/project.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.stack > h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.skill > h3 {
+  display: inline-block;
+  font-size: 1rem;
+  background-color: black;
+  border-radius: 50px;
+  border: 3px dotted var(--dark-color);
+  padding: .5rem 1.5rem;
+  margin-bottom: 2rem;
+}
+.skill > ul {
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  row-gap: 3rem;
+}
+.skill > ul > li {
+  transition: all .3s ease;
+}
+.skill > ul > li:hover {
+  transform: scale(1.1);
+}
+.skill > ul > li > h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: .8rem;
+}
+.skillTop > ul {
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+  .stack {
+    padding: 3rem;
+  }
+  .stack > h2 {
+    margin-bottom: 4rem;
+  }
+  .skill > ul > li > h4 {
+    font-size: 1rem;
+  }
+  .skill > ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .skill > ul {
+    list-style: disc;
+  }
+}

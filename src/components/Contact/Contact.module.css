@@ -1,0 +1,44 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 5rem;
+  color: var(--light-color);
+  flex-direction: column;
+}
+.contact > h2 {
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+}
+.contactContainer {
+  background-image: url(../../assets/img/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 10% 30%;
+}
+.contactContainer > ul {
+  text-align: center;
+  line-height: 5rem;
+}
+.contactContainer > ul > li > a {
+  color: var(--light-color);
+}
+
+@media (max-width: 768px) {
+  .contact > h2 {
+    font-size: 2rem;
+  }
+  .contact {
+    padding: 5rem 0;
+  }
+  .contactContainer {
+    padding: 10% 0;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .contact > h2 {
+    font-size: 1.7rem;
+  }
+}

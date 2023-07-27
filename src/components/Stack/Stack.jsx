@@ -1,9 +1,12 @@
+import styles from "./Stack.module.css";
+import cx from "clsx";
+
 export const Stack = () => {
   return (
-    <section id="stacks" className="stack">
+    <section id="stacks" className={styles.stack}>
       <h2>Stacks</h2>
-      <div className="container" data-aos="zoom-out">
-        <div className="skill skill-top">
+      <div className={styles.container} data-aos="zoom-out">
+        <div className={cx(styles.skill, styles.skillTop)}>
           <h3>SKILL</h3>
           <ul>
             <li>
@@ -40,7 +43,7 @@ export const Stack = () => {
             </li>
           </ul>
         </div>
-        <div className="skill skill-bottom">
+        <div className={cx(styles.skill)}>
           <h3>TOOL</h3>
           <ul>
             <li>

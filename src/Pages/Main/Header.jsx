@@ -1,12 +1,26 @@
-import Typewriter from "typewriter-effect";
+import { useState } from "react";
 import github from "../../assets/img/github.png";
 import blog from "../../assets/img/blog.png";
 import email from "../../assets/img/email.png";
+import Typewriter from "typewriter-effect";
+import AOS from "aos";
+import styles from "./Main.module.css";
+import cx from "clsx";
 
 export default function Header() {
+  const [viewOn, setViewOn] = useState(false);
+  // aos 라이브러리
+  AOS.init();
+  AOS.refresh();
+
+  // 4.4초 후 노출
+  setTimeout(() => {
+    setViewOn(true);
+  }, 4400);
+
   return (
-    <header id="home" className="flex">
-      <div className="container">
+    <header id="home">
+      <div className={styles.container}>
         <h1>
           안녕하세요,
           <Typewriter
@@ -20,16 +34,15 @@ export default function Header() {
             }}
           />
         </h1>
-        <h2 className="view">박희순</h2>
-        <ul className="flex view">
+        <h2 className={cx({ [styles.view]: viewOn })}>박희순</h2>
+        <ul className={cx({ [styles.view]: viewOn })}>
           <li>
             <a href="https://github.com/phs-developer">
-              {/* <img src="../../assets/img/github.png" alt="github" /> */}
               <img src={github} alt="github" />
             </a>
           </li>
           <li>
-            <a href="https://github.com/phs-developer">
+            <a href="https://blog.naver.com/gmltnscjswo">
               <img src={blog} alt="blog" />
             </a>
           </li>

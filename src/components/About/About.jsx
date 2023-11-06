@@ -1,19 +1,11 @@
-import profileImg from "../../assets/img/me.jpg";
 import styles from "./About.module.css";
 
 export const About = () => {
   return (
     <section id="about" className={styles.about}>
-      <div className={styles.container}>
+      <div>
         <div
-          className={styles.aboutLeft}
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
-          <img src={profileImg} alt="사진" />
-        </div>
-        <div
-          className={styles.aboutRight}
+          className={styles.aboutMe}
           data-aos="fade-down"
           data-aos-duration="1000"
         >

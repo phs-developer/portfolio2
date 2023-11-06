@@ -4,24 +4,18 @@
   align-items: center;
   background-color: var(--light-color);
   padding: 10rem 7rem;
-  color: var(--dark-color-light)
+  color: var(--dark-color-light);
 }
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 1rem;
+.aboutMe {
+  width: 60%;
 }
-.aboutLeft {
-  overflow: hidden;
-  height: 500px;
-}
-.aboutRight > h2 {
+.aboutMe > h2 {
   font-size: 2.5rem;
-  position:relative;
+  position: relative;
   margin-bottom: 4rem;
   color: var(--dark-color);
 }
-.aboutRight > h2::after {
+.aboutMe > h2::after {
   position: absolute;
   content: "";
   top: 110%;
@@ -30,7 +24,7 @@
   height: 3px;
   background-color: var(--dark-color);
 }
-.aboutRight > p {
+.aboutMe > p {
   margin-bottom: 3rem;
   line-height: 2rem;
 }
@@ -39,35 +33,19 @@
   margin-bottom: 1rem;
 }
 .edu > ul > li:first-child {
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
 }
 
 @media (max-width: 768px) {
   .about {
     padding: 5rem;
   }
-  .about > .container{
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 3rem;
-    justify-items: center;
-  }
-  .aboutLeft {
-    width: 400px;
-  }
-  .aboutLeft > img {
-    transform: rotate(90deg) translateY(70px) translateX(40px);
-    height: 400px;
+  .aboutMe {
+    width: 100%;
   }
 }
 @media (max-width: 576px) {
   .about {
     padding: 5rem 2rem;
-  }
-  .aboutLeft {
-    width: 300px;
-    height: 400px;
-  }
-  .aboutLeft > img {
-    height: 300px;
   }
 }

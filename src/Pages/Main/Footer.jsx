@@ -6,9 +6,6 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footerTop}>
         <h3>Park Hee Soon</h3>
-        <div>
-          <img src={meImg} alt="나" />
-        </div>
       </div>
       <div className={styles.footerBottom}>
         <h3>Links</h3>

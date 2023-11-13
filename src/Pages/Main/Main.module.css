@@ -22,13 +22,13 @@ header {
   letter-spacing: 1rem;
   font-weight: 100;
   opacity: 0;
-  transition: all .8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 .container > ul {
   display: flex;
   justify-content: flex-start;
   opacity: 0;
-  transition: all .8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 .container > .view {
   opacity: 1;
@@ -39,7 +39,7 @@ header {
   padding: 6.5px 0px 0px 6.5px;
   width: 30px;
   height: 30px;
-  margin-right: .7rem;
+  margin-right: 0.7rem;
 }
 .container > ul > li > a > img {
   width: 17px;
@@ -59,24 +59,14 @@ header {
   align-items: center;
 }
 .footerTop {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.8rem;
 }
 .footerTop > h3 {
-  letter-spacing: .1rem;
-  margin-bottom: 1.5rem;
-}
-.footerTop > div {
-  width: 70px;
-  height: 70px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-.footerTop > div > img {
-  width: 70px;
+  letter-spacing: 0.1rem;
 }
 .footerBottom > h3 {
-  font-size: .8rem;
-  margin-bottom: .6rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.9rem;
 }
 .footerBottom > ul {
   display: flex;
@@ -84,7 +74,7 @@ header {
   align-items: center;
   text-align: center;
   line-height: 1.5rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
   column-gap: 2rem;
 }
 .footerBottom > ul > li > a {
@@ -95,15 +85,15 @@ header {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-weight: 100;
-  color: var(--dark-color-light)
+  color: var(--dark-color-light);
 }
 
 /* media query */
 @media (max-width: 768px) {
-  header > .container{
-    margin-left : 3rem;
+  header > .container {
+    margin-left: 3rem;
   }
   .container > h1 {
     font-size: 3rem;
@@ -117,8 +107,8 @@ header {
 }
 
 @media (max-width: 576px) {
-  header > .container{
-    margin-left : 2rem;
+  header > .container {
+    margin-left: 2rem;
   }
   .container > h1 {
     font-size: 2.3rem;

@@ -6,6 +6,7 @@ import heroImg from "../../assets/img/hero.jpg";
 import footImg from "../../assets/img/foot.jpg";
 import portfolioImg from "../../assets/img/portfolio.jpg";
 import closeImg from "../../assets/img/close.png";
+import musicImg from "../../assets/img/music2.png";
 import cx from "clsx";
 
 export const Page = ({ opened, data, closed }) => {
@@ -14,6 +15,7 @@ export const Page = ({ opened, data, closed }) => {
     2: heroImg,
     3: portfolioImg,
     4: footImg,
+    5: musicImg,
   };
 
   return (
@@ -42,7 +44,7 @@ function Tech({ tech }) {
   return (
     <div className={styles.tech}>
       <h4 onClick={() => setToggle(!toggle)}>
-        주요 기능 <img src={triangleImg} alt="열기" />
+        Detail <img src={triangleImg} alt="열기" />
       </h4>
       {tech.map((e, i) => {
         return (

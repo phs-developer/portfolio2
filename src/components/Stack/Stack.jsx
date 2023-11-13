@@ -10,19 +10,19 @@ export const Stack = () => {
           <h3>SKILL</h3>
           <ul>
             <li>
-              <h4>HTML</h4>
+              <h4>HTML / CSS</h4>
               <p>
-                시멘틱 태그 사용과 웹접근성을 고려하여 웹표준을 준수하는
-                마크업이 가능합니다.
+                시멘틱 태그 사용으로 웹표준을 준수하는 마크업과 Styled
+                Component, emotion을 통한 디자인이 가능합니다.
               </p>
             </li>
-            <li>
+            {/* <li>
               <h4>CSS</h4>
               <p>
                 유연한 선택자 활용과 Styled Component, emotion을 통한 디자인이
                 가능합니다.
               </p>
-            </li>
+            </li> */}
             <li>
               <h4>JAVASCRIPT</h4>
               <p>
@@ -40,6 +40,14 @@ export const Stack = () => {
             <li>
               <h4>TYPESCRIPT</h4>
               <p>JS의 타입 이슈 방지를 위한 정적 언어를 사용합니다.</p>
+            </li>
+            <li>
+              <h4>Redux / Recoil / ContextAPI</h4>
+              <p>다양한 상태 관리를 통해 필요 시 적재적소에 사용합니다.</p>
+            </li>
+            <li>
+              <h4>NODE JS</h4>
+              <p>express를 통한 간단한 서버 구축이 가능합니다.</p>
             </li>
           </ul>
         </div>

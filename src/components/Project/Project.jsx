@@ -1,4 +1,5 @@
 import heroImg from "../../assets/img/hero.jpg";
+import musicImg from "../../assets/img/music2.png";
 import mangoImg from "../../assets/img/mangotoon.jpg";
 import portfolioImg from "../../assets/img/portfolio.jpg";
 import footImg from "../../assets/img/foot.jpg";
@@ -14,7 +15,6 @@ export const Project = () => {
     const name = event.currentTarget.children[0].innerText;
     const lowerName = name.toLowerCase().replaceAll(" ", "");
     (async () => {
-      //json src 폴더 안에서 작업하고 싶은데 경로가 헷갈린다!!
       fetch("./page.json", {
         headers: {
           Accept: "application / json",
@@ -34,21 +34,25 @@ export const Project = () => {
       )}
       <p>*click project!</p>
       <ul className={styles.work}>
+        <li name="music" onClick={handleOnPage}>
+          <p>MUSIC SPACE</p>
+          <img src={musicImg} alt="뮤직스페이스" />
+        </li>
         <li name="hero" onClick={handleOnPage}>
           <p>HERO</p>
-          <img src={heroImg} alt="히어로 프로젝트" />
+          <img src={heroImg} alt="히어로" />
         </li>
-        <li name="mango" onClick={handleOnPage}>
-          <p>MANGO TOON</p>
-          <img src={mangoImg} alt="망고툰 프로젝트" />
+        <li name="foot" onClick={handleOnPage}>
+          <p>FOOT</p>
+          <img src={footImg} alt="풋마켓" />
         </li>
         <li name="portfolio" onClick={handleOnPage}>
           <p>PORTFOLIO</p>
           <img src={portfolioImg} alt="포트폴리오" />
         </li>
-        <li name="foot" onClick={handleOnPage}>
-          <p>FOOT</p>
-          <img src={footImg} alt="풋마켓 프로젝트" />
+        <li name="mango" onClick={handleOnPage}>
+          <p>MANGO TOON</p>
+          <img src={mangoImg} alt="망고툰" />
         </li>
       </ul>
     </section>
